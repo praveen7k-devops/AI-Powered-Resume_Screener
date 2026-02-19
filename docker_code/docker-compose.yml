@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ai-resume-api
+    restart: unless-stopped
+    ports:
+      # Bind to host localhost only
+      - "127.0.0.1:8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  ui:
+    build:
+      context: ./resume-match-ui
+      dockerfile: Dockerfile
+    container_name: resume-match-ui
+    restart: unless-stopped
+    depends_on:
+      - api
+    ports:
+      # Bind to host localhost only
+      - "127.0.0.1:3000:80"
+    environment:
+      # This tells the UI at build time (if it reads REACT_APP_API_URL) to use the api service
+      - REACT_APP_API_URL=http://api:8000
+
+# Note:
+# - The UI will reach the API at http://api:8000 inside Docker network.
+# - Mapping the ports to 127.0.0.1 ensures the services are only reachable from the host's localhost.
+# - If your React app consumes a different env var name, update the environment key above or bake the URL into the build.

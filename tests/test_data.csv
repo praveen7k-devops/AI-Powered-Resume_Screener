@@ -1,0 +1,36 @@
+years_experience,skills_match_score,education_level,project_count,resume_length,github_activity
+6,84.7,Bachelors,7,234,158
+3,59.1,Masters,5,502,77
+12,100.0,Masters,12,753,381
+14,66.8,High School,8,529,407
+10,99.6,Bachelors,10,754,331
+7,74.1,Bachelors,12,575,290
+12,87.5,Bachelors,12,516,421
+4,54.2,Masters,8,335,255
+6,80.4,Bachelors,10,462,302
+
+http://127.0.0.1:8000/upload POST {"name": "logan"} -> {}
+invoke the predict and get 0/1
+
+//streamlit
+
+[
+"manik": {
+    "years_experience":12,
+    "skills_match_score":100,
+    "education_level":"Masters",
+    "project_count":12,
+    "resume_length":753,
+    "github_activity":381
+},
+"praveen"  : {
+    "years_experience":12,
+    "skills_match_score":100,
+    "education_level":"Masters",
+    "project_count":12,
+    "resume_length":753,
+    "github_activity":381
+},
+"logan: {bkjdsjd}
+]
+

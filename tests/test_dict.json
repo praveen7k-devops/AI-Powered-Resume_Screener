@@ -1,0 +1,26 @@
+{
+  "manik": {
+    "years_experience": 12,
+    "skills_match_score": 100,
+    "education_level": "Masters",
+    "project_count": 12,
+    "resume_length": 753,
+    "github_activity": 381
+  },
+  "praveen": {
+    "years_experience": 10,
+    "skills_match_score": 80,
+    "education_level": "Graduate",
+    "project_count": 2,
+    "resume_length": 73,
+    "github_activity": 3
+  },
+  "logan": {
+    "years_experience": 1,
+    "skills_match_score": 10,
+    "education_level": "Masters",
+    "project_count": 1,
+    "resume_length": 75,
+    "github_activity": 0
+  }
+}
